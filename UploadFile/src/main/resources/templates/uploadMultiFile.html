@@ -1,0 +1,19 @@
+<!DOCTYPE html >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Mutifile</title>
+</head>
+<body>
+<form th:object="${myUploadForm}" method="POST"
+      action="" enctype="multipart/form-data">
+    Description:
+    <br>
+    <input th:field="*{decription}" style="width:300px;"/>
+    <br/><br/>
+    File to upload: <input th:field="*{fileDatas}" type="file"/>
+    <br />
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
